@@ -1,0 +1,30 @@
+﻿<header>
+    <div class="content-wrapper">
+        <div class="float-left">
+            <p class="site-title">
+                <a href="~/">ASP.NET Web API</a>
+            </p>
+        </div>
+    </div>
+</header>
+<div id="body">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                @if (ViewBag.urlImage == null)
+                {
+                    using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @id = "form", @enctype = "multipart/form-data" }))
+                    {
+                    <input type="file" name="fImage" />
+                    <input type="submit" />
+                    }
+                }else
+                {
+                    <span>@ViewBag.urlImage</span>
+                }
+            </p>
+        </div>
+    </section>
+
+</div>
+

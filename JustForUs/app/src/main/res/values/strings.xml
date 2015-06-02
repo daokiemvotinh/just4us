@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">JustForUs</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_wall">WallActivity</string>
+</resources>

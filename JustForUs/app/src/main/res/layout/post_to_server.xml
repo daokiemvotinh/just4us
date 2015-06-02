@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_ori"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@id/FrameLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:background="@drawable/bg_navbar" >
+
+        <TextView
+            android:id="@id/title"
+            style="@style/TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Cập nhật trạng thái mới !"
+            android:textAppearance="?android:textAppearanceSmall" />
+
+        <ImageButton
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7.0dip"
+            android:background="@drawable/navbar_btn_cancel" />
+
+        <ImageButton
+            android:id="@+id/upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="7.0dip"
+            android:background="@drawable/navbar_btn_upload" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="30.0dip"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginRight="15.0dip"
+        android:layout_marginTop="10.0dip" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/border_image"
+            android:padding="5dip" >
+
+            <LinearLayout
+                android:id="@+id/Linear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <com.dkvt.justforus.externalclass.ResizableImageView
+                    android:id="@+id/story_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/comment"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Linear"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/dotted_border_line_button"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="new_story_hint"
+                android:paddingBottom="10.0dip"
+                android:paddingRight="15.0dip"
+                android:paddingTop="10.0dip"
+                android:singleLine="false"
+                android:textColorHint="#70ff0000"
+                android:textSize="13.0dip" >
+
+                <requestFocus />
+            </EditText>
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

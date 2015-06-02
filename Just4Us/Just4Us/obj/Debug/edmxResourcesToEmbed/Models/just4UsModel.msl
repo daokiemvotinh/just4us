@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ketquaxosoModelStoreContainer" CdmEntityContainer="Just4UsEntities">
+    <EntitySetMapping Name="Custommer">
+      <EntityTypeMapping TypeName="ketquaxosoModel.Custommer">
+        <MappingFragment StoreEntitySet="Custommer">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idUser" ColumnName="idUser" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+          <ScalarProperty Name="network" ColumnName="network" />
+          <ScalarProperty Name="cardCode" ColumnName="cardCode" />
+          <ScalarProperty Name="cardSeri" ColumnName="cardSeri" />
+          <ScalarProperty Name="valueMoney" ColumnName="valueMoney" />
+          <ScalarProperty Name="timeSubmit" ColumnName="timeSubmit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KetQuaBac">
+      <EntityTypeMapping TypeName="ketquaxosoModel.KetQuaBac">
+        <MappingFragment StoreEntitySet="KetQuaBac">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="maTinh" ColumnName="maTinh" />
+          <ScalarProperty Name="ngayMoXo" ColumnName="ngayMoXo" />
+          <ScalarProperty Name="loaiVe" ColumnName="loaiVe" />
+          <ScalarProperty Name="giaiDacBiet" ColumnName="giaiDacBiet" />
+          <ScalarProperty Name="giaiNhat" ColumnName="giaiNhat" />
+          <ScalarProperty Name="giaiNhi1" ColumnName="giaiNhi1" />
+          <ScalarProperty Name="giaiNhi2" ColumnName="giaiNhi2" />
+          <ScalarProperty Name="giaiBa1" ColumnName="giaiBa1" />
+          <ScalarProperty Name="giaiBa2" ColumnName="giaiBa2" />
+          <ScalarProperty Name="giaiBa3" ColumnName="giaiBa3" />
+          <ScalarProperty Name="giaiBa4" ColumnName="giaiBa4" />
+          <ScalarProperty Name="giaiBa5" ColumnName="giaiBa5" />
+          <ScalarProperty Name="giaiBa6" ColumnName="giaiBa6" />
+          <ScalarProperty Name="giaiTu1" ColumnName="giaiTu1" />
+          <ScalarProperty Name="giaiTu2" ColumnName="giaiTu2" />
+          <ScalarProperty Name="giaiTu3" ColumnName="giaiTu3" />
+          <ScalarProperty Name="giaiTu4" ColumnName="giaiTu4" />
+          <ScalarProperty Name="giaiNam1" ColumnName="giaiNam1" />
+          <ScalarProperty Name="giaiNam2" ColumnName="giaiNam2" />
+          <ScalarProperty Name="giaiNam3" ColumnName="giaiNam3" />
+          <ScalarProperty Name="giaiNam4" ColumnName="giaiNam4" />
+          <ScalarProperty Name="giaiNam5" ColumnName="giaiNam5" />
+          <ScalarProperty Name="giaiNam6" ColumnName="giaiNam6" />
+          <ScalarProperty Name="giaiSau1" ColumnName="giaiSau1" />
+          <ScalarProperty Name="giaiSau2" ColumnName="giaiSau2" />
+          <ScalarProperty Name="giaiSau3" ColumnName="giaiSau3" />
+          <ScalarProperty Name="giaiBay1" ColumnName="giaiBay1" />
+          <ScalarProperty Name="giaiBay2" ColumnName="giaiBay2" />
+          <ScalarProperty Name="giaiBay3" ColumnName="giaiBay3" />
+          <ScalarProperty Name="giaiBay4" ColumnName="giaiBay4" />
+          <ScalarProperty Name="mienXS" ColumnName="mienXS" />
+          <ScalarProperty Name="idTinh" ColumnName="idTinh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_J4U_Wall">
+      <EntityTypeMapping TypeName="ketquaxosoModel.tbl_J4U_Wall">
+        <MappingFragment StoreEntitySet="tbl_J4U_Wall">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="dateUpdate" ColumnName="dateUpdate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblArea">
+      <EntityTypeMapping TypeName="ketquaxosoModel.tblArea">
+        <MappingFragment StoreEntitySet="tblArea">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="idParent" ColumnName="idParent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCategory">
+      <EntityTypeMapping TypeName="ketquaxosoModel.tblCategory">
+        <MappingFragment StoreEntitySet="tblCategory">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblContact">
+      <EntityTypeMapping TypeName="ketquaxosoModel.tblContact">
+        <MappingFragment StoreEntitySet="tblContact">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="maincontent" ColumnName="maincontent" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isRemove" ColumnName="isRemove" />
+          <ScalarProperty Name="dateAdd" ColumnName="dateAdd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblKetQuaNamTrung">
+      <EntityTypeMapping TypeName="ketquaxosoModel.tblKetQuaNamTrung">
+        <MappingFragment StoreEntitySet="tblKetQuaNamTrung">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="maTinh" ColumnName="maTinh" />
+          <ScalarProperty Name="ngayMoXo" ColumnName="ngayMoXo" />
+          <ScalarProperty Name="loaiVe" ColumnName="loaiVe" />
+          <ScalarProperty Name="giaiDacBiet" ColumnName="giaiDacBiet" />
+          <ScalarProperty Name="giaiNhat" ColumnName="giaiNhat" />
+          <ScalarProperty Name="giaiNhi" ColumnName="giaiNhi" />
+          <ScalarProperty Name="giaiBa1" ColumnName="giaiBa1" />
+          <ScalarProperty Name="giaiBa2" ColumnName="giaiBa2" />
+          <ScalarProperty Name="giaiTu1" ColumnName="giaiTu1" />
+          <ScalarProperty Name="giaiTu2" ColumnName="giaiTu2" />
+          <ScalarProperty Name="giaiTu3" ColumnName="giaiTu3" />
+          <ScalarProperty Name="giaiTu4" ColumnName="giaiTu4" />
+          <ScalarProperty Name="giaiTu5" ColumnName="giaiTu5" />
+          <ScalarProperty Name="giaiTu6" ColumnName="giaiTu6" />
+          <ScalarProperty Name="giaiTu7" ColumnName="giaiTu7" />
+          <ScalarProperty Name="giaiNam" ColumnName="giaiNam" />
+          <ScalarProperty Name="giaiSau1" ColumnName="giaiSau1" />
+          <ScalarProperty Name="giaiSau2" ColumnName="giaiSau2" />
+          <ScalarProperty Name="giaiSau3" ColumnName="giaiSau3" />
+          <ScalarProperty Name="giaiBay" ColumnName="giaiBay" />
+          <ScalarProperty Name="giaiTam" ColumnName="giaiTam" />
+          <ScalarProperty Name="mienXS" ColumnName="mienXS" />
+          <ScalarProperty Name="idTinh" ColumnName="idTinh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblMember">
+      <EntityTypeMapping TypeName="ketquaxosoModel.tblMember">
+        <MappingFragment StoreEntitySet="tblMember">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDFacebook" ColumnName="IDFacebook" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UrlAvartar" ColumnName="UrlAvartar" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="RoleMember" ColumnName="RoleMember" />
+          <ScalarProperty Name="DateAdd" ColumnName="DateAdd" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsRemove" ColumnName="IsRemove" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProduct">
+      <EntityTypeMapping TypeName="ketquaxosoModel.tblProduct">
+        <MappingFragment StoreEntitySet="tblProduct">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="sortContent" ColumnName="sortContent" />
+          <ScalarProperty Name="longContent" ColumnName="longContent" />
+          <ScalarProperty Name="urlImage" ColumnName="urlImage" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="typePro" ColumnName="typePro" />
+          <ScalarProperty Name="rate" ColumnName="rate" />
+          <ScalarProperty Name="viewed" ColumnName="viewed" />
+          <ScalarProperty Name="dateadd" ColumnName="dateadd" />
+          <ScalarProperty Name="isRemove" ColumnName="isRemove" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="isHighlights" ColumnName="isHighlights" />
+          <ScalarProperty Name="urlImageSmall" ColumnName="urlImageSmall" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSoxo">
+      <EntityTypeMapping TypeName="ketquaxosoModel.tblSoxo">
+        <MappingFragment StoreEntitySet="tblSoxo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="money" ColumnName="money" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTinTuc">
+      <EntityTypeMapping TypeName="ketquaxosoModel.tblTinTuc">
+        <MappingFragment StoreEntitySet="tblTinTuc">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="des" ColumnName="des" />
+          <ScalarProperty Name="maincontent" ColumnName="maincontent" />
+          <ScalarProperty Name="urlImage" ColumnName="urlImage" />
+          <ScalarProperty Name="dateadd" ColumnName="dateadd" />
+          <ScalarProperty Name="isremove" ColumnName="isremove" />
+          <ScalarProperty Name="isactive" ColumnName="isactive" />
+          <ScalarProperty Name="rewriteurl" ColumnName="rewriteurl" />
+          <ScalarProperty Name="smallcontent" ColumnName="smallcontent" />
+          <ScalarProperty Name="isVip" ColumnName="isVip" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTinhThanh">
+      <EntityTypeMapping TypeName="ketquaxosoModel.tblTinhThanh">
+        <MappingFragment StoreEntitySet="tblTinhThanh">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MaTinh" ColumnName="MaTinh" />
+          <ScalarProperty Name="TenTinh" ColumnName="TenTinh" />
+          <ScalarProperty Name="ThuTrongTuan" ColumnName="ThuTrongTuan" />
+          <ScalarProperty Name="Mien" ColumnName="Mien" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="ThuTrongTuan2" ColumnName="ThuTrongTuan2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTypePro">
+      <EntityTypeMapping TypeName="ketquaxosoModel.tblTypePro">
+        <MappingFragment StoreEntitySet="tblTypePro">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="typePromotion" ColumnName="typePromotion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblThongBao">
+      <EntityTypeMapping TypeName="ketquaxosoModel.tblThongBao">
+        <MappingFragment StoreEntitySet="tblThongBao">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="noidung" ColumnName="noidung" />
+          <ScalarProperty Name="noidung2" ColumnName="noidung2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUser">
+      <EntityTypeMapping TypeName="ketquaxosoModel.tblUser">
+        <MappingFragment StoreEntitySet="tblUser">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_story"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/border_image"
+        android:padding="5dip" >
+
+        <LinearLayout
+            android:id="@+id/Linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.dkvt.justforus.externalclass.ResizableImageView
+                android:id="@+id/list_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/Linear"
+            android:layout_below="@+id/Linear"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:textColor="#404040"
+            android:textIsSelectable="false"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/Linear"
+            android:layout_below="@+id/name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="01-10-2013 11H:30:30"
+            android:textIsSelectable="false"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/Linear"
+            android:layout_alignRight="@+id/name"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/btn_story_delete"
+            android:contentDescription="Upload Button" />
+
+        <ImageButton
+            android:id="@+id/btn_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/btn_delete"
+            android:layout_toLeftOf="@+id/btn_delete"
+            android:background="@drawable/btn_story_edit"
+            android:contentDescription="Upload Button" />
+    </RelativeLayout>
+
+</LinearLayout>

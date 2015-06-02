@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="light_black">#ff576969</color>
+    <color name="content_text">#ff595959</color>
+    <color name="emerald">#ff5c9dcc</color>
+    <color name="green">#ff00aa00</color>
+    <color name="pink">#ffe08a90</color>
+    <color name="orange">#ffff7000</color>
+    <color name="gray">#ff919191</color>
+    <color name="dark_blue">#ff3283bd</color>
+    <color name="light_blue">#ffedf7f9</color>
+    <color name="screen_background">#ffc0f0c0</color>
+    <color name="error_message">#ffc00000</color>
+    <color name="light_gray">#ffa8aeb1</color>
+    <color name="wet_gray">#7fa8aeb1</color>
+    <color name="wet_blue">#ff8bb3d6</color>
+    <color name="hot_pink">#fff588af</color>
+    <color name="light_pink">#ffeec2c2</color>
+    <color name="wet_pink">#7feec2c2</color>
+    <color name="themecard_blue">#ff367bad</color>
+    <color name="numpad_color">#ff394247</color>
+    <color name="warning">#ffd17e59</color>
+    <color name="push_message">#ffc5dcef</color>
+    <color name="dark_gray">#939393</color>
+    <color name="white">#ffffff</color>
+    <color name="red">#ff0000</color>
+    <color name="blue">#84CBEF</color>
+    <color name="font_blue">#5B99CF</color>
+    <color name="text">#ff5c9dcc</color>
+    <color name="hight_gray">#d3d3d3</color>
+    <color name="bg_story">#E4EFF4</color>
+
+</resources>

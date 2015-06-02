@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ketquaxosoModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ketquaxosoModelStoreContainer">
+    <EntitySet Name="Custommer" EntityType="ketquaxosoModel.Store.Custommer" store:Type="Tables" Schema="Administrator" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="KetQuaBac" EntityType="ketquaxosoModel.Store.KetQuaBac" store:Type="Tables" Schema="Administrator" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tbl_J4U_Wall" EntityType="ketquaxosoModel.Store.tbl_J4U_Wall" store:Type="Tables" Schema="Administrator" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblArea" EntityType="ketquaxosoModel.Store.tblArea" store:Type="Tables" Schema="Administrator" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblCategory" EntityType="ketquaxosoModel.Store.tblCategory" store:Type="Tables" Schema="Administrator" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblContact" EntityType="ketquaxosoModel.Store.tblContact" store:Type="Tables" Schema="Administrator" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblKetQuaNamTrung" EntityType="ketquaxosoModel.Store.tblKetQuaNamTrung" store:Type="Tables" Schema="Administrator" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblMember" EntityType="ketquaxosoModel.Store.tblMember" store:Type="Tables" Schema="Administrator" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblProduct" EntityType="ketquaxosoModel.Store.tblProduct" store:Type="Tables" Schema="Administrator" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblSoxo" EntityType="ketquaxosoModel.Store.tblSoxo" store:Type="Tables" Schema="Administrator" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblTinTuc" EntityType="ketquaxosoModel.Store.tblTinTuc" store:Type="Tables" Schema="Administrator" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblTinhThanh" EntityType="ketquaxosoModel.Store.tblTinhThanh" store:Type="Tables" Schema="Administrator" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblTypePro" EntityType="ketquaxosoModel.Store.tblTypePro" store:Type="Tables" Schema="Administrator" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblThongBao" EntityType="ketquaxosoModel.Store.tblThongBao" store:Type="Tables" Schema="Administrator" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="tblUser" EntityType="ketquaxosoModel.Store.tblUser" store:Type="Tables" Schema="Administrator" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <AssociationSet Name="FK_Custommer_Member" Association="ketquaxosoModel.Store.FK_Custommer_Member">
+      <End Role="tblMember" EntitySet="tblMember" />
+      <End Role="Custommer" EntitySet="Custommer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KetQuaBac_tblTinhThanh" Association="ketquaxosoModel.Store.FK_KetQuaBac_tblTinhThanh">
+      <End Role="tblTinhThanh" EntitySet="tblTinhThanh" />
+      <End Role="KetQuaBac" EntitySet="KetQuaBac" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblKetQuaNamTrung_tblTinh" Association="ketquaxosoModel.Store.FK_tblKetQuaNamTrung_tblTinh">
+      <End Role="tblTinhThanh" EntitySet="tblTinhThanh" />
+      <End Role="tblKetQuaNamTrung" EntitySet="tblKetQuaNamTrung" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProduct_tblArea" Association="ketquaxosoModel.Store.FK_tblProduct_tblArea">
+      <End Role="tblArea" EntitySet="tblArea" />
+      <End Role="tblProduct" EntitySet="tblProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProduct_tblCategory" Association="ketquaxosoModel.Store.FK_tblProduct_tblCategory">
+      <End Role="tblCategory" EntitySet="tblCategory" />
+      <End Role="tblProduct" EntitySet="tblProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProduct_tblTypePro" Association="ketquaxosoModel.Store.FK_tblProduct_tblTypePro">
+      <End Role="tblTypePro" EntitySet="tblTypePro" />
+      <End Role="tblProduct" EntitySet="tblProduct" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Custommer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idUser" Type="int" />
+    <Property Name="phoneNumber" Type="varchar" MaxLength="50" />
+    <Property Name="network" Type="varchar" MaxLength="50" />
+    <Property Name="cardCode" Type="varchar" MaxLength="50" />
+    <Property Name="cardSeri" Type="varchar" MaxLength="50" />
+    <Property Name="valueMoney" Type="varchar" MaxLength="50" />
+    <Property Name="timeSubmit" Type="datetime" />
+  </EntityType>
+  <EntityType Name="KetQuaBac">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="maTinh" Type="nvarchar" MaxLength="50" />
+    <Property Name="ngayMoXo" Type="date" />
+    <Property Name="loaiVe" Type="varchar" MaxLength="50" />
+    <Property Name="giaiDacBiet" Type="varchar" MaxLength="10" />
+    <Property Name="giaiNhat" Type="varchar" MaxLength="10" />
+    <Property Name="giaiNhi1" Type="varchar" MaxLength="10" />
+    <Property Name="giaiNhi2" Type="varchar" MaxLength="10" />
+    <Property Name="giaiBa1" Type="varchar" MaxLength="10" />
+    <Property Name="giaiBa2" Type="varchar" MaxLength="10" />
+    <Property Name="giaiBa3" Type="varchar" MaxLength="10" />
+    <Property Name="giaiBa4" Type="varchar" MaxLength="10" />
+    <Property Name="giaiBa5" Type="varchar" MaxLength="10" />
+    <Property Name="giaiBa6" Type="varchar" MaxLength="10" />
+    <Property Name="giaiTu1" Type="varchar" MaxLength="10" />
+    <Property Name="giaiTu2" Type="varchar" MaxLength="10" />
+    <Property Name="giaiTu3" Type="varchar" MaxLength="10" />
+    <Property Name="giaiTu4" Type="varchar" MaxLength="10" />
+    <Property Name="giaiNam1" Type="varchar" MaxLength="10" />
+    <Property Name="giaiNam2" Type="varchar" MaxLength="10" />
+    <Property Name="giaiNam3" Type="varchar" MaxLength="10" />
+    <Property Name="giaiNam4" Type="varchar" MaxLength="10" />
+    <Property Name="giaiNam5" Type="varchar" MaxLength="10" />
+    <Property Name="giaiNam6" Type="varchar" MaxLength="10" />
+    <Property Name="giaiSau1" Type="varchar" MaxLength="10" />
+    <Property Name="giaiSau2" Type="varchar" MaxLength="10" />
+    <Property Name="giaiSau3" Type="varchar" MaxLength="10" />
+    <Property Name="giaiBay1" Type="varchar" MaxLength="10" />
+    <Property Name="giaiBay2" Type="varchar" MaxLength="10" />
+    <Property Name="giaiBay3" Type="varchar" MaxLength="10" />
+    <Property Name="giaiBay4" Type="varchar" MaxLength="10" />
+    <Property Name="mienXS" Type="int" />
+    <Property Name="idTinh" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_J4U_Wall">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="status" Type="nvarchar" MaxLength="1000" />
+    <Property Name="url" Type="varchar" MaxLength="500" />
+    <Property Name="userID" Type="int" />
+    <Property Name="dateUpdate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblArea">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="area" Type="nvarchar" MaxLength="500" />
+    <Property Name="idParent" Type="int" />
+  </EntityType>
+  <EntityType Name="tblCategory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="tblContact">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar" MaxLength="500" />
+    <Property Name="email" Type="varchar" MaxLength="500" />
+    <Property Name="title" Type="nvarchar" MaxLength="1000" />
+    <Property Name="maincontent" Type="ntext" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="isRemove" Type="bit" />
+    <Property Name="dateAdd" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblKetQuaNamTrung">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="maTinh" Type="nvarchar" MaxLength="50" />
+    <Property Name="ngayMoXo" Type="date" />
+    <Property Name="loaiVe" Type="nvarchar" MaxLength="50" />
+    <Property Name="giaiDacBiet" Type="varchar" MaxLength="10" />
+    <Property Name="giaiNhat" Type="varchar" MaxLength="10" />
+    <Property Name="giaiNhi" Type="varchar" MaxLength="10" />
+    <Property Name="giaiBa1" Type="varchar" MaxLength="10" />
+    <Property Name="giaiBa2" Type="varchar" MaxLength="10" />
+    <Property Name="giaiTu1" Type="varchar" MaxLength="10" />
+    <Property Name="giaiTu2" Type="varchar" MaxLength="10" />
+    <Property Name="giaiTu3" Type="varchar" MaxLength="10" />
+    <Property Name="giaiTu4" Type="varchar" MaxLength="10" />
+    <Property Name="giaiTu5" Type="varchar" MaxLength="10" />
+    <Property Name="giaiTu6" Type="varchar" MaxLength="10" />
+    <Property Name="giaiTu7" Type="varchar" MaxLength="10" />
+    <Property Name="giaiNam" Type="varchar" MaxLength="10" />
+    <Property Name="giaiSau1" Type="varchar" MaxLength="10" />
+    <Property Name="giaiSau2" Type="varchar" MaxLength="10" />
+    <Property Name="giaiSau3" Type="varchar" MaxLength="10" />
+    <Property Name="giaiBay" Type="varchar" MaxLength="10" />
+    <Property Name="giaiTam" Type="varchar" MaxLength="10" />
+    <Property Name="mienXS" Type="int" />
+    <Property Name="idTinh" Type="int" />
+  </EntityType>
+  <EntityType Name="tblMember">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IDFacebook" Type="varchar" MaxLength="1000" />
+    <Property Name="Username" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Password" Type="varchar" MaxLength="1000" />
+    <Property Name="UrlAvartar" Type="varchar" MaxLength="1000" />
+    <Property Name="Phone" Type="varchar" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="500" />
+    <Property Name="RoleMember" Type="int" />
+    <Property Name="DateAdd" Type="date" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsRemove" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblProduct">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar" MaxLength="1000" />
+    <Property Name="category" Type="int" />
+    <Property Name="sortContent" Type="ntext" />
+    <Property Name="longContent" Type="ntext" />
+    <Property Name="urlImage" Type="varchar" MaxLength="1000" />
+    <Property Name="area" Type="int" />
+    <Property Name="typePro" Type="int" />
+    <Property Name="rate" Type="int" />
+    <Property Name="viewed" Type="int" />
+    <Property Name="dateadd" Type="date" />
+    <Property Name="isRemove" Type="bit" />
+    <Property Name="isActive" Type="bit" />
+    <Property Name="isHighlights" Type="bit" />
+    <Property Name="urlImageSmall" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="tblSoxo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="phone" Type="varchar" MaxLength="20" />
+    <Property Name="money" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tblTinTuc">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="nvarchar" />
+    <Property Name="des" Type="nvarchar" />
+    <Property Name="maincontent" Type="ntext" />
+    <Property Name="urlImage" Type="varchar" MaxLength="4000" />
+    <Property Name="dateadd" Type="datetime" />
+    <Property Name="isremove" Type="bit" />
+    <Property Name="isactive" Type="bit" />
+    <Property Name="rewriteurl" Type="varchar" MaxLength="4000" />
+    <Property Name="smallcontent" Type="ntext" />
+    <Property Name="isVip" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblTinhThanh">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MaTinh" Type="varchar" MaxLength="100" />
+    <Property Name="TenTinh" Type="nvarchar" MaxLength="100" />
+    <Property Name="ThuTrongTuan" Type="int" />
+    <Property Name="Mien" Type="int" />
+    <Property Name="Link" Type="varchar" MaxLength="2000" />
+    <Property Name="ThuTrongTuan2" Type="int" />
+  </EntityType>
+  <EntityType Name="tblTypePro">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="typePromotion" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tblThongBao">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="noidung" Type="ntext" />
+    <Property Name="noidung2" Type="ntext" />
+  </EntityType>
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="varchar" MaxLength="1000" />
+    <Property Name="password" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <Association Name="FK_Custommer_Member">
+    <End Role="tblMember" Type="ketquaxosoModel.Store.tblMember" Multiplicity="0..1" />
+    <End Role="Custommer" Type="ketquaxosoModel.Store.Custommer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblMember">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Custommer">
+        <PropertyRef Name="idUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KetQuaBac_tblTinhThanh">
+    <End Role="tblTinhThanh" Type="ketquaxosoModel.Store.tblTinhThanh" Multiplicity="0..1" />
+    <End Role="KetQuaBac" Type="ketquaxosoModel.Store.KetQuaBac" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblTinhThanh">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="KetQuaBac">
+        <PropertyRef Name="idTinh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblKetQuaNamTrung_tblTinh">
+    <End Role="tblTinhThanh" Type="ketquaxosoModel.Store.tblTinhThanh" Multiplicity="0..1" />
+    <End Role="tblKetQuaNamTrung" Type="ketquaxosoModel.Store.tblKetQuaNamTrung" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblTinhThanh">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblKetQuaNamTrung">
+        <PropertyRef Name="idTinh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProduct_tblArea">
+    <End Role="tblArea" Type="ketquaxosoModel.Store.tblArea" Multiplicity="0..1" />
+    <End Role="tblProduct" Type="ketquaxosoModel.Store.tblProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblArea">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblProduct">
+        <PropertyRef Name="area" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProduct_tblCategory">
+    <End Role="tblCategory" Type="ketquaxosoModel.Store.tblCategory" Multiplicity="0..1" />
+    <End Role="tblProduct" Type="ketquaxosoModel.Store.tblProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCategory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblProduct">
+        <PropertyRef Name="category" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProduct_tblTypePro">
+    <End Role="tblTypePro" Type="ketquaxosoModel.Store.tblTypePro" Multiplicity="0..1" />
+    <End Role="tblProduct" Type="ketquaxosoModel.Store.tblProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblTypePro">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblProduct">
+        <PropertyRef Name="typePro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

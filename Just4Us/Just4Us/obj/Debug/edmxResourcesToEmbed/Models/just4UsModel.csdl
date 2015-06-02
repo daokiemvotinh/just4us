@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ketquaxosoModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="Just4UsEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Custommer" EntityType="ketquaxosoModel.Custommer" />
+    <EntitySet Name="KetQuaBac" EntityType="ketquaxosoModel.KetQuaBac" />
+    <EntitySet Name="tbl_J4U_Wall" EntityType="ketquaxosoModel.tbl_J4U_Wall" />
+    <EntitySet Name="tblArea" EntityType="ketquaxosoModel.tblArea" />
+    <EntitySet Name="tblCategory" EntityType="ketquaxosoModel.tblCategory" />
+    <EntitySet Name="tblContact" EntityType="ketquaxosoModel.tblContact" />
+    <EntitySet Name="tblKetQuaNamTrung" EntityType="ketquaxosoModel.tblKetQuaNamTrung" />
+    <EntitySet Name="tblMember" EntityType="ketquaxosoModel.tblMember" />
+    <EntitySet Name="tblProduct" EntityType="ketquaxosoModel.tblProduct" />
+    <EntitySet Name="tblSoxo" EntityType="ketquaxosoModel.tblSoxo" />
+    <EntitySet Name="tblTinTuc" EntityType="ketquaxosoModel.tblTinTuc" />
+    <EntitySet Name="tblTinhThanh" EntityType="ketquaxosoModel.tblTinhThanh" />
+    <EntitySet Name="tblTypePro" EntityType="ketquaxosoModel.tblTypePro" />
+    <EntitySet Name="tblThongBao" EntityType="ketquaxosoModel.tblThongBao" />
+    <EntitySet Name="tblUser" EntityType="ketquaxosoModel.tblUser" />
+    <AssociationSet Name="FK_Custommer_Member" Association="ketquaxosoModel.FK_Custommer_Member">
+      <End Role="tblMember" EntitySet="tblMember" />
+      <End Role="Custommer" EntitySet="Custommer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KetQuaBac_tblTinhThanh" Association="ketquaxosoModel.FK_KetQuaBac_tblTinhThanh">
+      <End Role="tblTinhThanh" EntitySet="tblTinhThanh" />
+      <End Role="KetQuaBac" EntitySet="KetQuaBac" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProduct_tblArea" Association="ketquaxosoModel.FK_tblProduct_tblArea">
+      <End Role="tblArea" EntitySet="tblArea" />
+      <End Role="tblProduct" EntitySet="tblProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProduct_tblCategory" Association="ketquaxosoModel.FK_tblProduct_tblCategory">
+      <End Role="tblCategory" EntitySet="tblCategory" />
+      <End Role="tblProduct" EntitySet="tblProduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblKetQuaNamTrung_tblTinh" Association="ketquaxosoModel.FK_tblKetQuaNamTrung_tblTinh">
+      <End Role="tblTinhThanh" EntitySet="tblTinhThanh" />
+      <End Role="tblKetQuaNamTrung" EntitySet="tblKetQuaNamTrung" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblProduct_tblTypePro" Association="ketquaxosoModel.FK_tblProduct_tblTypePro">
+      <End Role="tblTypePro" EntitySet="tblTypePro" />
+      <End Role="tblProduct" EntitySet="tblProduct" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Custommer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="idUser" Type="Int32" />
+    <Property Name="phoneNumber" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="network" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="cardCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="cardSeri" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="valueMoney" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="timeSubmit" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tblMember" Relationship="ketquaxosoModel.FK_Custommer_Member" FromRole="Custommer" ToRole="tblMember" />
+  </EntityType>
+  <EntityType Name="KetQuaBac">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="maTinh" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ngayMoXo" Type="DateTime" Precision="0" />
+    <Property Name="loaiVe" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="giaiDacBiet" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiNhat" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiNhi1" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiNhi2" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiBa1" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiBa2" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiBa3" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiBa4" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiBa5" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiBa6" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiTu1" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiTu2" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiTu3" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiTu4" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiNam1" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiNam2" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiNam3" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiNam4" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiNam5" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiNam6" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiSau1" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiSau2" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiSau3" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiBay1" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiBay2" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiBay3" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiBay4" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="mienXS" Type="Int32" />
+    <Property Name="idTinh" Type="Int32" />
+    <NavigationProperty Name="tblTinhThanh" Relationship="ketquaxosoModel.FK_KetQuaBac_tblTinhThanh" FromRole="KetQuaBac" ToRole="tblTinhThanh" />
+  </EntityType>
+  <EntityType Name="tbl_J4U_Wall">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="status" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+    <Property Name="url" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="userID" Type="Int32" />
+    <Property Name="dateUpdate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblArea">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="area" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="idParent" Type="Int32" />
+    <NavigationProperty Name="tblProduct" Relationship="ketquaxosoModel.FK_tblProduct_tblArea" FromRole="tblArea" ToRole="tblProduct" />
+  </EntityType>
+  <EntityType Name="tblCategory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblProduct" Relationship="ketquaxosoModel.FK_tblProduct_tblCategory" FromRole="tblCategory" ToRole="tblProduct" />
+  </EntityType>
+  <EntityType Name="tblContact">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="email" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="title" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+    <Property Name="maincontent" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="isRemove" Type="Boolean" />
+    <Property Name="dateAdd" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblKetQuaNamTrung">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="maTinh" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ngayMoXo" Type="DateTime" Precision="0" />
+    <Property Name="loaiVe" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="giaiDacBiet" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiNhat" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiNhi" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiBa1" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiBa2" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiTu1" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiTu2" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiTu3" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiTu4" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiTu5" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiTu6" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiTu7" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiNam" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiSau1" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiSau2" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiSau3" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiBay" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="giaiTam" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="mienXS" Type="Int32" />
+    <Property Name="idTinh" Type="Int32" />
+    <NavigationProperty Name="tblTinhThanh" Relationship="ketquaxosoModel.FK_tblKetQuaNamTrung_tblTinh" FromRole="tblKetQuaNamTrung" ToRole="tblTinhThanh" />
+  </EntityType>
+  <EntityType Name="tblMember">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="IDFacebook" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="Username" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="UrlAvartar" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="RoleMember" Type="Int32" />
+    <Property Name="DateAdd" Type="DateTime" Precision="0" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsRemove" Type="Boolean" />
+    <NavigationProperty Name="Custommer" Relationship="ketquaxosoModel.FK_Custommer_Member" FromRole="tblMember" ToRole="Custommer" />
+  </EntityType>
+  <EntityType Name="tblProduct">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+    <Property Name="category" Type="Int32" />
+    <Property Name="sortContent" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="longContent" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="urlImage" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="area" Type="Int32" />
+    <Property Name="typePro" Type="Int32" />
+    <Property Name="rate" Type="Int32" />
+    <Property Name="viewed" Type="Int32" />
+    <Property Name="dateadd" Type="DateTime" Precision="0" />
+    <Property Name="isRemove" Type="Boolean" />
+    <Property Name="isActive" Type="Boolean" />
+    <Property Name="isHighlights" Type="Boolean" />
+    <Property Name="urlImageSmall" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="tblArea" Relationship="ketquaxosoModel.FK_tblProduct_tblArea" FromRole="tblProduct" ToRole="tblArea" />
+    <NavigationProperty Name="tblCategory" Relationship="ketquaxosoModel.FK_tblProduct_tblCategory" FromRole="tblProduct" ToRole="tblCategory" />
+    <NavigationProperty Name="tblTypePro" Relationship="ketquaxosoModel.FK_tblProduct_tblTypePro" FromRole="tblProduct" ToRole="tblTypePro" />
+  </EntityType>
+  <EntityType Name="tblSoxo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="phone" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="money" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tblTinTuc">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+    <Property Name="des" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+    <Property Name="maincontent" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="urlImage" Type="String" MaxLength="4000" Unicode="false" FixedLength="false" />
+    <Property Name="dateadd" Type="DateTime" Precision="3" />
+    <Property Name="isremove" Type="Boolean" />
+    <Property Name="isactive" Type="Boolean" />
+    <Property Name="rewriteurl" Type="String" MaxLength="4000" Unicode="false" FixedLength="false" />
+    <Property Name="smallcontent" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="isVip" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tblTinhThanh">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="MaTinh" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="TenTinh" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="ThuTrongTuan" Type="Int32" />
+    <Property Name="Mien" Type="Int32" />
+    <Property Name="Link" Type="String" MaxLength="2000" Unicode="false" FixedLength="false" />
+    <Property Name="ThuTrongTuan2" Type="Int32" />
+    <NavigationProperty Name="KetQuaBac" Relationship="ketquaxosoModel.FK_KetQuaBac_tblTinhThanh" FromRole="tblTinhThanh" ToRole="KetQuaBac" />
+    <NavigationProperty Name="tblKetQuaNamTrung" Relationship="ketquaxosoModel.FK_tblKetQuaNamTrung_tblTinh" FromRole="tblTinhThanh" ToRole="tblKetQuaNamTrung" />
+  </EntityType>
+  <EntityType Name="tblTypePro">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="typePromotion" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="tblProduct" Relationship="ketquaxosoModel.FK_tblProduct_tblTypePro" FromRole="tblTypePro" ToRole="tblProduct" />
+  </EntityType>
+  <EntityType Name="tblThongBao">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="noidung" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="noidung2" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="password" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Custommer_Member">
+    <End Role="tblMember" Type="ketquaxosoModel.tblMember" Multiplicity="0..1" />
+    <End Role="Custommer" Type="ketquaxosoModel.Custommer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblMember">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Custommer">
+        <PropertyRef Name="idUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KetQuaBac_tblTinhThanh">
+    <End Role="tblTinhThanh" Type="ketquaxosoModel.tblTinhThanh" Multiplicity="0..1" />
+    <End Role="KetQuaBac" Type="ketquaxosoModel.KetQuaBac" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblTinhThanh">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="KetQuaBac">
+        <PropertyRef Name="idTinh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProduct_tblArea">
+    <End Role="tblArea" Type="ketquaxosoModel.tblArea" Multiplicity="0..1" />
+    <End Role="tblProduct" Type="ketquaxosoModel.tblProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblArea">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblProduct">
+        <PropertyRef Name="area" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProduct_tblCategory">
+    <End Role="tblCategory" Type="ketquaxosoModel.tblCategory" Multiplicity="0..1" />
+    <End Role="tblProduct" Type="ketquaxosoModel.tblProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCategory">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblProduct">
+        <PropertyRef Name="category" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblKetQuaNamTrung_tblTinh">
+    <End Role="tblTinhThanh" Type="ketquaxosoModel.tblTinhThanh" Multiplicity="0..1" />
+    <End Role="tblKetQuaNamTrung" Type="ketquaxosoModel.tblKetQuaNamTrung" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblTinhThanh">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="tblKetQuaNamTrung">
+        <PropertyRef Name="idTinh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblProduct_tblTypePro">
+    <End Role="tblTypePro" Type="ketquaxosoModel.tblTypePro" Multiplicity="0..1" />
+    <End Role="tblProduct" Type="ketquaxosoModel.tblProduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblTypePro">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblProduct">
+        <PropertyRef Name="typePro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
